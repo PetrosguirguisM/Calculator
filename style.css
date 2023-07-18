@@ -1,25 +1,62 @@
 .calculator {
-    width: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f1f1f1;
-  }
-  
-  #result {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 18px;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-  }
-  
-  button {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
+  width: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: right;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.button {
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  background: #d3d3d3;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button.operator {
+  background: #ff8c00;
+  color: #fff;
+}
+
+.button.clear,
+.button.equal {
+  grid-column: span 2;
+}
+
+.button.clear {
+  background: #ff4d4d;
+}
+
+.button.equal {
+  background: #ff8c00;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:focus {
+  outline: none;
+}
